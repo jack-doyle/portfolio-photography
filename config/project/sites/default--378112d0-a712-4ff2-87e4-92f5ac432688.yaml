@@ -1,0 +1,9 @@
+baseUrl: $PRIMARY_SITE_URL
+enabled: true
+handle: default
+hasUrls: true
+language: en
+name: 'Jack Doyle'
+primary: true
+siteGroup: e4c8b9e9-be96-4edd-8830-803bbc0d577a # jackdoyle-portfolio
+sortOrder: 1

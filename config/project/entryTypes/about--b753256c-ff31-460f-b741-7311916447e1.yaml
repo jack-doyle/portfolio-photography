@@ -1,0 +1,87 @@
+color: null
+description: null
+fieldLayouts:
+  c50a599b-8593-4dfa-934b-49f7086799b8:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-12-06T16:49:01+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: e904dee7-a86a-4c02-b373-81da988788ba
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-12-06T16:51:10+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 5b145a04-4bbe-4caa-be93-fea2bb0e0783 # Image
+            handle: profileImage
+            includeInCards: false
+            instructions: null
+            label: 'Profile Image'
+            providesThumbs: true
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1bbc2f96-224f-49d9-a8e3-3a6cb16beafd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-12-06T16:51:46+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 0840f648-5b6d-422b-ad96-bcaa66bc62d0 # Text
+            handle: bio
+            includeInCards: false
+            instructions: null
+            label: Bio
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: edf21d89-fc62-4baa-8a21-6144b2e18f67
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 7e0cde04-4968-4812-adfb-477dda0091f4
+        userCondition: null
+handle: about
+hasTitleField: true
+icon: null
+name: About
+showSlugField: true
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="{{ craft.app.language }}">
+  <head>
+    <meta charset="utf-8"/>
+    <title>{{ siteName }}</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    {% do craft.app.view.registerCssFile('@web/styles.css') %}
+  </head>
+  <body>
+    <header>
+      <a class="home" href="{{ siteUrl }}">{{ siteName }}</a>
+      <nav>
+        <ul>
+          <li>
+            <a href="{{ url('/') }}">Portfolio</a>
+          </li>
+
+
+          <li>
+            <a href="{{ url('concerts') }}">Concerts</a>
+          </li>
+
+
+          <li>
+            <a href="{{ url('events') }}">Events</a>
+          </li>
+
+
+          <li>
+            <a href="{{ url('world') }}">World</a>
+          </li>
+
+
+          <li>
+            <a href="{{ url('people') }}">People</a>
+          </li>
+         
+          <li>
+            <a href="{{ url('contact') }}">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      {% block content %}
+        {# Nothing here, yet! #}
+      {% endblock %}
+    </main>
+    <footer>
+      <div class="copyright">&copy;{{ now | date('Y') }} Jack Doyle</div>
+    </footer>
+  </body>
+</html>

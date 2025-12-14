@@ -1,0 +1,21 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 71d5b9a1-f483-483a-bdfc-fe8df9504777 # Contact
+handle: contact
+maxAuthors: 1
+name: Contact
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  378112d0-a712-4ff2-87e4-92f5ac432688: # Jack Doyle
+    enabledByDefault: true
+    hasUrls: true
+    template: _singles/contact
+    uriFormat: contact
+type: single

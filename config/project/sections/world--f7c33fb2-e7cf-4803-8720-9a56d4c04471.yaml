@@ -1,0 +1,21 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 4df433fa-7f5d-4bd0-8256-d8bfb3fc177d # Photo Entry
+handle: world
+maxAuthors: 1
+name: World
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  378112d0-a712-4ff2-87e4-92f5ac432688: # Jack Doyle
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: channel

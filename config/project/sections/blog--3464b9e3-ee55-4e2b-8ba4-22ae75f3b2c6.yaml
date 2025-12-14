@@ -1,0 +1,21 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: ba3952b7-dbf0-4f79-b16f-d424793b28c8 # Post
+handle: blog
+maxAuthors: 1
+name: Blog
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  378112d0-a712-4ff2-87e4-92f5ac432688: # Jack Doyle
+    enabledByDefault: true
+    hasUrls: true
+    template: blog/_entry.twig
+    uriFormat: 'blog/{slug}'
+type: channel
