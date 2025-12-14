@@ -6,107 +6,112 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
       <link href="styles.css" rel="stylesheet"></head>
-  <body>
+  <body class="bg-white text-slate-900">
     
-    <header>
-      <a class="home" href="index.html">Jack Doyle</a>
-      <nav aria-label="Primary">
-        <ul role="list">
-          <li>
-            <a href="index.html" aria-current="">Portfolio</a>
-          </li>
-          <li>
-            <a href="concerts.html" aria-current="page">Concerts</a>
-          </li>
-          <li>
-            <a href="events.html" aria-current="">Events</a>
-          </li>
-          <li>
-            <a href="world.html" aria-current="">World</a>
-          </li>
-          <li>
-            <a href="people.html" aria-current="">People</a>
-          </li>
-          <li>
-            <a href="contact.html" aria-current="">Contact</a>
-          </li>
-        </ul>
-      </nav>
+    <header class="border-b border-slate-200/60">
+      <div class="site-shell flex flex-col gap-4 py-6 sm:flex-row sm:items-center sm:justify-between">
+        <a class="text-xl font-semibold tracking-tight hover:text-brand focus-visible:outline-none focus-visible:ring focus-visible:ring-brand/50" href="index.html">
+          Jack Doyle
+        </a>
+        <nav aria-label="Primary">
+          <ul class="primary-nav" role="list">
+            <li>
+              <a class="nav-link" href="index.html" aria-current="">Portfolio</a>
+            </li>
+            <li>
+              <a class="nav-link" href="concerts.html" aria-current="page">Concerts</a>
+            </li>
+            <li>
+              <a class="nav-link" href="events.html" aria-current="">Events</a>
+            </li>
+            <li>
+              <a class="nav-link" href="world.html" aria-current="">World</a>
+            </li>
+            <li>
+              <a class="nav-link" href="people.html" aria-current="">People</a>
+            </li>
+            <li>
+              <a class="nav-link" href="contact.html" aria-current="">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <main>
-        <section aria-labelledby="gallery-title">
-    <h1 id="gallery-title">Concerts</h1>
+    <main id="main-content" class="site-shell py-10 sm:py-14" tabindex="-1">
+        <section aria-labelledby="gallery-title" class="space-y-6">
+    <h1 id="gallery-title" class="page-title">Concerts</h1>
 
-  
-    <ul class="grid" role="list">
+    
+    <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3" role="list">
                                 
-          <li>
-                          <div class="tile">
-                <img src="uploads/images/18764314243se95-cc2c5d.jpg" alt="Dublin 2">
-              </div>
-                      </li>
+          <li class="card p-0">
+            <div class="aspect-[4/5] overflow-hidden rounded-lg">
+                              <img class="h-full w-full object-cover" src="uploads/images/18764314243se95-cc2c5d.jpg" alt="Dublin 2" loading="lazy">
+                          </div>
+          </li>
                                         
-          <li>
-                          <div class="tile">
-                <img src="uploads/images/18764314243zkgw-95daa7.jpg" alt="Sky 4">
-              </div>
-                      </li>
+          <li class="card p-0">
+            <div class="aspect-[4/5] overflow-hidden rounded-lg">
+                              <img class="h-full w-full object-cover" src="uploads/images/18764314243zkgw-95daa7.jpg" alt="Sky 4" loading="lazy">
+                          </div>
+          </li>
                                         
-          <li>
-                          <div class="tile">
-                <img src="uploads/images/18764314243xt75-e2651a.jpg" alt="Dublin 1">
-              </div>
-                      </li>
+          <li class="card p-0">
+            <div class="aspect-[4/5] overflow-hidden rounded-lg">
+                              <img class="h-full w-full object-cover" src="uploads/images/18764314243xt75-e2651a.jpg" alt="Dublin 1" loading="lazy">
+                          </div>
+          </li>
                                         
-          <li>
-                          <div class="tile">
-                <img src="uploads/images/1876431424306tx-5b0d68.jpg" alt="Sky 1">
-              </div>
-                      </li>
+          <li class="card p-0">
+            <div class="aspect-[4/5] overflow-hidden rounded-lg">
+                              <img class="h-full w-full object-cover" src="uploads/images/1876431424306tx-5b0d68.jpg" alt="Sky 1" loading="lazy">
+                          </div>
+          </li>
                                         
-          <li>
-                          <div class="tile">
-                <img src="uploads/images/18764314243jmme-63ae04.jpg" alt="Sky 2">
-              </div>
-                      </li>
+          <li class="card p-0">
+            <div class="aspect-[4/5] overflow-hidden rounded-lg">
+                              <img class="h-full w-full object-cover" src="uploads/images/18764314243jmme-63ae04.jpg" alt="Sky 2" loading="lazy">
+                          </div>
+          </li>
                                         
-          <li>
-                          <div class="tile">
-                <img src="uploads/images/18764314243kocv-8511ae.jpg" alt="Sky 3">
-              </div>
-                      </li>
+          <li class="card p-0">
+            <div class="aspect-[4/5] overflow-hidden rounded-lg">
+                              <img class="h-full w-full object-cover" src="uploads/images/18764314243kocv-8511ae.jpg" alt="Sky 3" loading="lazy">
+                          </div>
+          </li>
                                         
-          <li>
-                          <div class="tile">
-                <img src="uploads/images/18764314243rfnm-68d0e3.jpg" alt="Sky 5">
-              </div>
-                      </li>
+          <li class="card p-0">
+            <div class="aspect-[4/5] overflow-hidden rounded-lg">
+                              <img class="h-full w-full object-cover" src="uploads/images/18764314243rfnm-68d0e3.jpg" alt="Sky 5" loading="lazy">
+                          </div>
+          </li>
                                         
-          <li>
-                          <div class="tile">
-                <img src="uploads/images/15a-01212-624651.jpg" alt="Dan 3">
-              </div>
-                      </li>
+          <li class="card p-0">
+            <div class="aspect-[4/5] overflow-hidden rounded-lg">
+                              <img class="h-full w-full object-cover" src="uploads/images/15a-01212-624651.jpg" alt="Dan 3" loading="lazy">
+                          </div>
+          </li>
                                         
-          <li>
-                          <div class="tile">
-                <img src="uploads/images/img-20240715-190040-f53047.jpg" alt="Dan 2">
-              </div>
-                      </li>
+          <li class="card p-0">
+            <div class="aspect-[4/5] overflow-hidden rounded-lg">
+                              <img class="h-full w-full object-cover" src="uploads/images/img-20240715-190040-f53047.jpg" alt="Dan 2" loading="lazy">
+                          </div>
+          </li>
                                         
-          <li>
-                          <div class="tile">
-                <img src="uploads/images/1721328349018-5beab3.jpg" alt="Dan 1">
-              </div>
-                      </li>
+          <li class="card p-0">
+            <div class="aspect-[4/5] overflow-hidden rounded-lg">
+                              <img class="h-full w-full object-cover" src="uploads/images/1721328349018-5beab3.jpg" alt="Dan 1" loading="lazy">
+                          </div>
+          </li>
                   </ul>
   </section>
     </main>
 
-    <footer>
-      <div class="copyright">&copy;2025 Jack Doyle</div>
+    <footer class="border-t border-slate-200/60">
+      <div class="site-shell py-6 text-center text-sm text-slate-500">
+        <div class="copyright">&copy;2025 Jack Doyle</div>
+      </div>
     </footer>
   </body>
 </html>
-<!-- Cached by Blitz on 2025-12-14T11:25:14-08:00 --><!-- Served by Blitz on 2025-12-14T11:25:17-08:00 -->

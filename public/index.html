@@ -6,68 +6,80 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
       <link href="styles.css" rel="stylesheet"></head>
-  <body>
+  <body class="bg-white text-slate-900">
     
-    <header>
-      <a class="home" href="index.html">Jack Doyle</a>
-      <nav aria-label="Primary">
-        <ul role="list">
-          <li>
-            <a href="index.html" aria-current="page">Portfolio</a>
-          </li>
-          <li>
-            <a href="concerts.html" aria-current="">Concerts</a>
-          </li>
-          <li>
-            <a href="events.html" aria-current="">Events</a>
-          </li>
-          <li>
-            <a href="world.html" aria-current="">World</a>
-          </li>
-          <li>
-            <a href="people.html" aria-current="">People</a>
-          </li>
-          <li>
-            <a href="contact.html" aria-current="">Contact</a>
-          </li>
-        </ul>
-      </nav>
+    <header class="border-b border-slate-200/60">
+      <div class="site-shell flex flex-col gap-4 py-6 sm:flex-row sm:items-center sm:justify-between">
+        <a class="text-xl font-semibold tracking-tight hover:text-brand focus-visible:outline-none focus-visible:ring focus-visible:ring-brand/50" href="index.html">
+          Jack Doyle
+        </a>
+        <nav aria-label="Primary">
+          <ul class="primary-nav" role="list">
+            <li>
+              <a class="nav-link" href="index.html" aria-current="page">Portfolio</a>
+            </li>
+            <li>
+              <a class="nav-link" href="concerts.html" aria-current="">Concerts</a>
+            </li>
+            <li>
+              <a class="nav-link" href="events.html" aria-current="">Events</a>
+            </li>
+            <li>
+              <a class="nav-link" href="world.html" aria-current="">World</a>
+            </li>
+            <li>
+              <a class="nav-link" href="people.html" aria-current="">People</a>
+            </li>
+            <li>
+              <a class="nav-link" href="contact.html" aria-current="">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <main>
+    <main id="main-content" class="site-shell py-10 sm:py-14" tabindex="-1">
         
     
-      <section aria-labelledby="portfolio">
-      <h1 id="portfolio">Portfolio</h1>
+      <section aria-labelledby="portfolio" class="space-y-6">
+      <div class="space-y-2">
+        <h1 id="portfolio" class="page-title">Portfolio</h1>
+        <p class="muted">Browse the full set of galleries and stories.</p>
+      </div>
 
-      <ul role="list">
-                  <li>
-            <a href="concerts.html">
-              Concerts
+      <ul role="list" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  <li class="card">
+            <a class="nav-link justify-between text-base font-semibold" href="concerts.html">
+              <span>Concerts</span>
+              <span aria-hidden="true">→</span>
             </a>
           </li>
-                  <li>
-            <a href="events.html">
-              Events
+                  <li class="card">
+            <a class="nav-link justify-between text-base font-semibold" href="events.html">
+              <span>Events</span>
+              <span aria-hidden="true">→</span>
             </a>
           </li>
-                  <li>
-            <a href="people.html">
-              People
+                  <li class="card">
+            <a class="nav-link justify-between text-base font-semibold" href="people.html">
+              <span>People</span>
+              <span aria-hidden="true">→</span>
             </a>
           </li>
-                  <li>
-            <a href="world.html">
-              World
+                  <li class="card">
+            <a class="nav-link justify-between text-base font-semibold" href="world.html">
+              <span>World</span>
+              <span aria-hidden="true">→</span>
             </a>
           </li>
               </ul>
     </section>
       </main>
 
-    <footer>
-      <div class="copyright">&copy;2025 Jack Doyle</div>
+    <footer class="border-t border-slate-200/60">
+      <div class="site-shell py-6 text-center text-sm text-slate-500">
+        <div class="copyright">&copy;2025 Jack Doyle</div>
+      </div>
     </footer>
   </body>
 </html>
-<!-- Cached by Blitz on 2025-12-14T11:25:13-08:00 --><!-- Served by Blitz on 2025-12-14T11:25:17-08:00 -->
