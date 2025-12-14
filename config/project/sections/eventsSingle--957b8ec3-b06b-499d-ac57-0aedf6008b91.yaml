@@ -2,10 +2,10 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: ba3952b7-dbf0-4f79-b16f-d424793b28c8 # Post
-handle: blog
+    uid: 453810de-f8ae-4caa-a73f-2976cc9cc55c # Gallery meta
+handle: eventsSingle
 maxAuthors: 1
-name: Blog
+name: 'Events Single'
 previewTargets:
   -
     label: 'Primary entry page'
@@ -16,6 +16,6 @@ siteSettings:
   378112d0-a712-4ff2-87e4-92f5ac432688: # Jack Doyle
     enabledByDefault: true
     hasUrls: true
-    template: blog/_entry.twig
-    uriFormat: 'blog/{slug}'
-type: channel
+    template: gallery.twig
+    uriFormat: events
+type: single

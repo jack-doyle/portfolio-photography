@@ -1,0 +1,53 @@
+color: null
+description: null
+fieldLayouts:
+  ceb1764c-d97b-45d4-a51e-7e0d6ea7df43:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-12-14T17:32:50+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 79196f79-34b5-48cb-a19e-56588823ccc3
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 686fd961-5809-45d6-bf26-00688f5d7d7e
+        userCondition: null
+handle: galleryMeta
+hasTitleField: true
+icon: null
+name: 'Gallery meta'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

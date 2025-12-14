@@ -1,0 +1,25 @@
+{% extends '_layout' %}
+
+{% block content %}
+  {% set siteId = craft.app.sites.currentSite.id %}
+
+    {% set channelSections = craft.app.entries.allSections
+        |filter(section => section.type == 'channel')
+    %}
+
+  {% if channelSections|length %}
+    <section aria-labelledby="portfolio">
+      <h1 id="portfolio">Portfolio</h1>
+
+      <ul role="list">
+        {% for section in channelSections %}
+          <li>
+            <a href="{{ url(section.handle) }}">
+              {{ section.name }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+{% endblock %}

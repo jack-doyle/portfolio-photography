@@ -8,45 +8,39 @@
     {% do craft.app.view.registerCssFile('@web/styles.css') %}
   </head>
   <body>
+    {% set currentSegment = craft.app.request.getSegment(1) %}
+
     <header>
       <a class="home" href="{{ siteUrl }}">{{ siteName }}</a>
-      <nav>
-        <ul>
+      <nav aria-label="Primary">
+        <ul role="list">
           <li>
-            <a href="{{ url('/') }}">Portfolio</a>
+            <a href="{{ url('/') }}" aria-current="{{ currentSegment is null ? 'page' : null }}">Portfolio</a>
           </li>
-
-
           <li>
-            <a href="{{ url('concerts') }}">Concerts</a>
+            <a href="{{ url('concerts') }}" aria-current="{{ currentSegment == 'concerts' ? 'page' : null }}">Concerts</a>
           </li>
-
-
           <li>
-            <a href="{{ url('events') }}">Events</a>
+            <a href="{{ url('events') }}" aria-current="{{ currentSegment == 'events' ? 'page' : null }}">Events</a>
           </li>
-
-
           <li>
-            <a href="{{ url('world') }}">World</a>
+            <a href="{{ url('world') }}" aria-current="{{ currentSegment == 'world' ? 'page' : null }}">World</a>
           </li>
-
-
           <li>
-            <a href="{{ url('people') }}">People</a>
+            <a href="{{ url('people') }}" aria-current="{{ currentSegment == 'people' ? 'page' : null }}">People</a>
           </li>
-         
           <li>
-            <a href="{{ url('contact') }}">Contact</a>
+            <a href="{{ url('contact') }}" aria-current="{{ currentSegment == 'contact' ? 'page' : null }}">Contact</a>
           </li>
         </ul>
       </nav>
     </header>
+
     <main>
       {% block content %}
-        {# Nothing here, yet! #}
       {% endblock %}
     </main>
+
     <footer>
       <div class="copyright">&copy;{{ now | date('Y') }} Jack Doyle</div>
     </footer>

@@ -1,0 +1,35 @@
+{% extends '_layout' %}
+
+{% block content %}
+  <section aria-labelledby="gallery-title">
+    <h1 id="gallery-title">{{ entry.title }}</h1>
+
+  {% set photos = craft.entries()
+    .section(entry.title)
+    .status('live')
+    .orderBy('postDate desc')
+    .all()
+  %}
+
+    <ul class="grid" role="list">
+      {% for photo in photos %}
+        {% set img = photo.image.one() %}
+        {% if img %}
+          {% set altText = img.alt ?? photo.title %}
+
+          <li>
+            {% if photo.url %}
+              <a class="tile" href="{{ photo.url }}">
+                <img src="{{ img.url }}" alt="{{ altText }}">
+              </a>
+            {% else %}
+              <div class="tile">
+                <img src="{{ img.url }}" alt="{{ altText }}">
+              </div>
+            {% endif %}
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+{% endblock %}

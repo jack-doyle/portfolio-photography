@@ -2,12 +2,10 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: 4df433fa-7f5d-4bd0-8256-d8bfb3fc177d # Photo Entry
-  -
-    uid: ee1e90c3-7e58-4597-915d-a94766e76add # Section image
-handle: concerts
+    uid: 453810de-f8ae-4caa-a73f-2976cc9cc55c # Gallery meta
+handle: portfolio
 maxAuthors: 1
-name: Concerts
+name: Portfolio
 previewTargets:
   -
     label: 'Primary entry page'
@@ -17,7 +15,7 @@ propagationMethod: all
 siteSettings:
   378112d0-a712-4ff2-87e4-92f5ac432688: # Jack Doyle
     enabledByDefault: true
-    hasUrls: false
-    template: null
-    uriFormat: null
-type: channel
+    hasUrls: true
+    template: _singles/portfolio.twig
+    uriFormat: portfolio
+type: single

@@ -1,0 +1,40 @@
+color: null
+description: null
+fieldLayouts:
+  4f2cb7ba-14bb-4fc5-89c6-1d8d85037d76:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-12-14T16:51:49+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 5b145a04-4bbe-4caa-be93-fea2bb0e0783 # Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a3c3519d-f9f8-4851-a55c-651a7ff100c6
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: cae0e7b3-4972-4a10-a876-a475a060225b
+        userCondition: null
+handle: sectionImage
+hasTitleField: false
+icon: null
+name: 'Section image'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

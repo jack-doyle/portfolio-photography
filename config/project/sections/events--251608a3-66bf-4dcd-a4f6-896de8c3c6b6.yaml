@@ -3,6 +3,8 @@ enableVersioning: true
 entryTypes:
   -
     uid: 4df433fa-7f5d-4bd0-8256-d8bfb3fc177d # Photo Entry
+  -
+    uid: ee1e90c3-7e58-4597-915d-a94766e76add # Section image
 handle: events
 maxAuthors: 1
 name: Events
