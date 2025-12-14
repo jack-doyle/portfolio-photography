@@ -48,6 +48,23 @@
   .prose a {
     @apply text-brand underline decoration-1 underline-offset-2 hover:decoration-2;
   }
+
+  /* Glide */
+  .gallery-glide .glide__slides {
+    @apply flex items-center;
+  }
+
+  .gallery-glide .glide__bullet {
+    @apply rounded-none;
+  }
+
+  .gallery-glide .glide__bullet--active {
+    @apply ring-2 ring-brand/60;
+  }
+
+  .gallery-glide .glide__bullet img {
+    @apply h-full w-full object-cover;
+  }
 }
 
 @layer utilities {
