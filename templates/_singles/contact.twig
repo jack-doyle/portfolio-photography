@@ -9,8 +9,18 @@
     <div class="grid gap-6 md:grid-cols-[240px,1fr] md:items-start">
       {% if profileImage %}
         {% set altText = profileImage.alt ?? entry.title ~ ' portrait' %}
+        {% set transformedUrl = profileImage.getUrl('fit') ?? profileImage.url %}
+        {% set transformedWidth = profileImage.getWidth('fit') ?? profileImage.width ?? null %}
+        {% set transformedHeight = profileImage.getHeight('fit') ?? profileImage.height ?? null %}
         <figure class="overflow-hidden rounded-lg border border-slate-200/80 shadow-sm">
-          <img class="h-full w-full object-cover" src="{{ profileImage.url }}" alt="{{ altText }}" loading="lazy">
+          <img
+            class="h-full w-full object-cover"
+            src="{{ transformedUrl }}"
+            alt="{{ altText }}"
+            loading="lazy"
+            width="{{ transformedWidth }}"
+            height="{{ transformedHeight }}"
+          >
         </figure>
       {% endif %}
 

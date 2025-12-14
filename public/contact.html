@@ -43,8 +43,15 @@
     <h1 id="contact-title" class="page-title">Get in touch</h1>
 
     <div class="grid gap-6 md:grid-cols-[240px,1fr] md:items-start">
-                      <figure class="overflow-hidden rounded-lg border border-slate-200/80 shadow-sm">
-          <img class="h-full w-full object-cover" src="uploads/images/dsc-0286-2-42a707.jpg" alt="Get in touch portrait" loading="lazy">
+                                              <figure class="overflow-hidden rounded-lg border border-slate-200/80 shadow-sm">
+          <img
+            class="h-full w-full object-cover"
+            src="actions/assets/generate-transform%3FtransformId=26"
+            alt="Get in touch portrait"
+            loading="lazy"
+            width="1000"
+            height="800"
+          >
         </figure>
       
       <div class="prose max-w-none">
@@ -59,5 +66,17 @@
         <div class="copyright">&copy;2025 Jack Doyle</div>
       </div>
     </footer>
-  </body>
+  <script type="text/javascript">
+/*<![CDATA[*/
+(function(){
+  try {
+    var req = new XMLHttpRequest();
+    req.open('GET', "https:\/\/portfolio-craft.ddev.site\/actions\/queue\/run", true);
+    req.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    if (req.readyState === 4) return;
+    req.send();
+  } catch (e) {}
+})();
+/*]]>*/
+</script></body>
 </html>

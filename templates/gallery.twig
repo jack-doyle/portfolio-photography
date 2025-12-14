@@ -16,15 +16,32 @@
         {% set img = photo.image.one() %}
         {% if img %}
           {% set altText = img.alt ?? photo.title %}
+          {% set transformedUrl = img.getUrl('fit') ?? img.url %}
+          {% set transformedWidth = img.getWidth('fit') ?? img.width ?? null %}
+          {% set transformedHeight = img.getHeight('fit') ?? img.height ?? null %}
 
           <li class="card p-0">
             <div class="aspect-[4/5] overflow-hidden rounded-lg">
               {% if photo.url %}
                 <a class="block h-full w-full focus-visible:outline-none focus-visible:ring focus-visible:ring-brand/50" href="{{ photo.url }}">
-                  <img class="h-full w-full object-cover" src="{{ img.url }}" alt="{{ altText }}" loading="lazy">
+                  <img
+                    class="h-full w-full object-cover"
+                    src="{{ transformedUrl }}"
+                    alt="{{ altText }}"
+                    loading="lazy"
+                    width="{{ transformedWidth }}"
+                    height="{{ transformedHeight }}"
+                  >
                 </a>
               {% else %}
-                <img class="h-full w-full object-cover" src="{{ img.url }}" alt="{{ altText }}" loading="lazy">
+                <img
+                  class="h-full w-full object-cover"
+                  src="{{ transformedUrl }}"
+                  alt="{{ altText }}"
+                  loading="lazy"
+                  width="{{ transformedWidth }}"
+                  height="{{ transformedHeight }}"
+                >
               {% endif %}
             </div>
           </li>
