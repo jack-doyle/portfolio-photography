@@ -3,20 +3,20 @@
 {% set profileImage = entry.image.one() %}
 
 {% block content %}
-  <section aria-labelledby="contact-title">
-    <h1 id="contact-title">{{ entry.title }}</h1>
+  <section aria-labelledby="contact-title" class="space-y-6">
+    <h1 id="contact-title" class="page-title">{{ entry.title }}</h1>
 
-  <div class="about">
-    {% if profileImage %}
-      {% set altText = profileImage.alt ?? entry.title ~ ' portrait' %}
-      <figure class="photo">
-        <img src="{{ profileImage.url }}" alt="{{ altText }}">
-      </figure>
-    {% endif %}
+    <div class="grid gap-6 md:grid-cols-[240px,1fr] md:items-start">
+      {% if profileImage %}
+        {% set altText = profileImage.alt ?? entry.title ~ ' portrait' %}
+        <figure class="overflow-hidden rounded-lg border border-slate-200/80 shadow-sm">
+          <img class="h-full w-full object-cover" src="{{ profileImage.url }}" alt="{{ altText }}" loading="lazy">
+        </figure>
+      {% endif %}
 
-    <div class="bio">
-      {{ entry.bio | md }}
+      <div class="prose max-w-none">
+        {{ entry.bio | md }}
+      </div>
     </div>
-  </div>
   </section>
 {% endblock %}

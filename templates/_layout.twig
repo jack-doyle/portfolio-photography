@@ -7,42 +7,48 @@
 
     {% do craft.app.view.registerCssFile('@web/styles.css') %}
   </head>
-  <body>
+  <body class="bg-white text-slate-900">
     {% set currentSegment = craft.app.request.getSegment(1) %}
 
-    <header>
-      <a class="home" href="{{ siteUrl }}">{{ siteName }}</a>
-      <nav aria-label="Primary">
-        <ul role="list">
-          <li>
-            <a href="{{ url('/') }}" aria-current="{{ currentSegment is null ? 'page' : null }}">Portfolio</a>
-          </li>
-          <li>
-            <a href="{{ url('concerts') }}" aria-current="{{ currentSegment == 'concerts' ? 'page' : null }}">Concerts</a>
-          </li>
-          <li>
-            <a href="{{ url('events') }}" aria-current="{{ currentSegment == 'events' ? 'page' : null }}">Events</a>
-          </li>
-          <li>
-            <a href="{{ url('world') }}" aria-current="{{ currentSegment == 'world' ? 'page' : null }}">World</a>
-          </li>
-          <li>
-            <a href="{{ url('people') }}" aria-current="{{ currentSegment == 'people' ? 'page' : null }}">People</a>
-          </li>
-          <li>
-            <a href="{{ url('contact') }}" aria-current="{{ currentSegment == 'contact' ? 'page' : null }}">Contact</a>
-          </li>
-        </ul>
-      </nav>
+    <header class="border-b border-slate-200/60">
+      <div class="site-shell flex flex-col gap-4 py-6 sm:flex-row sm:items-center sm:justify-between">
+        <a class="text-xl font-semibold tracking-tight hover:text-brand focus-visible:outline-none focus-visible:ring focus-visible:ring-brand/50" href="{{ siteUrl }}">
+          {{ siteName }}
+        </a>
+        <nav aria-label="Primary">
+          <ul class="primary-nav" role="list">
+            <li>
+              <a class="nav-link" href="{{ url('/') }}" aria-current="{{ currentSegment is null ? 'page' : null }}">Portfolio</a>
+            </li>
+            <li>
+              <a class="nav-link" href="{{ url('concerts') }}" aria-current="{{ currentSegment == 'concerts' ? 'page' : null }}">Concerts</a>
+            </li>
+            <li>
+              <a class="nav-link" href="{{ url('events') }}" aria-current="{{ currentSegment == 'events' ? 'page' : null }}">Events</a>
+            </li>
+            <li>
+              <a class="nav-link" href="{{ url('world') }}" aria-current="{{ currentSegment == 'world' ? 'page' : null }}">World</a>
+            </li>
+            <li>
+              <a class="nav-link" href="{{ url('people') }}" aria-current="{{ currentSegment == 'people' ? 'page' : null }}">People</a>
+            </li>
+            <li>
+              <a class="nav-link" href="{{ url('contact') }}" aria-current="{{ currentSegment == 'contact' ? 'page' : null }}">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <main>
+    <main id="main-content" class="site-shell py-10 sm:py-14" tabindex="-1">
       {% block content %}
       {% endblock %}
     </main>
 
-    <footer>
-      <div class="copyright">&copy;{{ now | date('Y') }} Jack Doyle</div>
+    <footer class="border-t border-slate-200/60">
+      <div class="site-shell py-6 text-center text-sm text-slate-500">
+        <div class="copyright">&copy;{{ now | date('Y') }} Jack Doyle</div>
+      </div>
     </footer>
   </body>
 </html>

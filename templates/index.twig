@@ -8,14 +8,18 @@
     %}
 
   {% if channelSections|length %}
-    <section aria-labelledby="portfolio">
-      <h1 id="portfolio">Portfolio</h1>
+    <section aria-labelledby="portfolio" class="space-y-6">
+      <div class="space-y-2">
+        <h1 id="portfolio" class="page-title">Portfolio</h1>
+        <p class="muted">Browse the full set of galleries and stories.</p>
+      </div>
 
-      <ul role="list">
+      <ul role="list" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {% for section in channelSections %}
-          <li>
-            <a href="{{ url(section.handle) }}">
-              {{ section.name }}
+          <li class="card">
+            <a class="nav-link justify-between text-base font-semibold" href="{{ url(section.handle) }}">
+              <span>{{ section.name }}</span>
+              <span aria-hidden="true">→</span>
             </a>
           </li>
         {% endfor %}

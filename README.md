@@ -109,3 +109,22 @@ This tells Netlify:
 
 - serve `/public`
 - do not run a build step
+
+---
+
+## Tailwind CSS build
+
+1) Install Node dependencies (one-time):
+```bash
+npm install
+```
+
+2) Build CSS (outputs to `web/styles.css`):
+```bash
+npm run build
+```
+
+3) For local development with live CSS rebuilds:
+```bash
+npm run dev
+```

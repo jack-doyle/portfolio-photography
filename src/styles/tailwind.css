@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-slate-900 font-sans antialiased;
+  }
+
+  a {
+    @apply text-slate-900;
+  }
+}
+
+@layer components {
+  .site-shell {
+    @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-brand focus:shadow;
+  }
+
+  .primary-nav {
+    @apply flex flex-wrap gap-3 text-sm sm:text-base font-medium;
+  }
+
+  .nav-link {
+    @apply inline-flex items-center gap-2 rounded-full px-3 py-1 transition-colors duration-150 ease-in-out hover:text-brand focus-visible:outline-none focus-visible:ring focus-visible:ring-brand/50;
+  }
+
+  .nav-link[aria-current='page'] {
+    @apply bg-brand/10 text-brand;
+  }
+
+  .card {
+    @apply rounded-lg border border-slate-200 bg-white/70 p-4 shadow-sm transition hover:shadow focus-within:shadow;
+  }
+
+  .prose {
+    @apply space-y-4 leading-relaxed text-slate-800;
+  }
+
+  .prose p {
+    @apply text-base;
+  }
+
+  .prose a {
+    @apply text-brand underline decoration-1 underline-offset-2 hover:decoration-2;
+  }
+}
+
+@layer utilities {
+  .page-title {
+    @apply text-3xl sm:text-4xl font-semibold tracking-tight text-slate-900;
+  }
+
+  .muted {
+    @apply text-sm text-slate-500;
+  }
+}
