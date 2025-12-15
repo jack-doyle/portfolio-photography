@@ -790,6 +790,14 @@ main {
   position: sticky;
 }
 
+.order-last {
+  order: 9999;
+}
+
+.order-5 {
+  order: 5;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -829,10 +837,6 @@ main {
 
 .aspect-\[4\/5\] {
   aspect-ratio: 4/5;
-}
-
-.h-1\/2 {
-  height: 50%;
 }
 
 .h-full {
@@ -1174,6 +1178,10 @@ main {
 }
 
 @media (min-width: 640px) {
+  .sm\:order-last {
+    order: 9999;
+  }
+
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1207,6 +1215,18 @@ main {
 }
 
 @media (min-width: 768px) {
+  .md\:order-first {
+    order: -9999;
+  }
+
+  .md\:order-last {
+    order: 9999;
+  }
+
+  .md\:order-5 {
+    order: 5;
+  }
+
   .md\:block {
     display: block;
   }

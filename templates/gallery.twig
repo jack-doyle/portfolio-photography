@@ -17,7 +17,7 @@
 
         <div class="block md:hidden">
           <div class="flex flex-col items-center gap-4">
-            <h1 class="text-[clamp(2.5rem,9vw,5rem)] font-extrabold lowercase tracking-tight text-slate-900">{{entry.title}}</h1>
+            <h1 class="text-[clamp(2.5rem,9vw,5rem)] text-brand font-extrabold lowercase tracking-tight">{{entry.title}}</h1>
           </div>
         </div>
         
@@ -97,7 +97,6 @@
     if (carouselEl) {
       const statusEl = document.getElementById('carousel-status');
       const countEl = document.getElementById('carousel-count');
-      const pauseBtn = carouselEl.querySelector('.carousel-pause');
       const bullets = Array.from(carouselEl.querySelectorAll('.glide__bullet'));
       const totalSlides = carouselEl.querySelectorAll('.glide__slide').length;
       let autoplayEnabled = false;
@@ -133,21 +132,6 @@
       });
 
       glide.mount();
-
-      if (pauseBtn) {
-        pauseBtn.addEventListener('click', () => {
-          autoplayEnabled = !autoplayEnabled;
-          pauseBtn.setAttribute('aria-pressed', autoplayEnabled ? 'true' : 'false');
-          pauseBtn.textContent = autoplayEnabled ? 'Pause autoplay' : 'Start autoplay';
-          if (autoplayEnabled) {
-            glide.update({ autoplay: 5000 });
-            glide.play();
-          } else {
-            glide.update({ autoplay: false });
-            glide.pause();
-          }
-        });
-      }
 
       carouselEl.addEventListener('keydown', (event) => {
         if (event.key === 'ArrowLeft') {
