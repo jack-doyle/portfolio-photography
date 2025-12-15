@@ -44,9 +44,14 @@
                     {% set transformedWidth = img.getWidth('fit') ?? img.width ?? null %}
                     {% set transformedHeight = img.getHeight('fit') ?? img.height ?? null %}
 
-                    <li class="glide__slide">
+                    <li
+                      class="glide__slide"
+                      data-lightbox-index="{{ loop.index0 }}"
+                      data-full-url="{{ img.url }}"
+                      data-alt="{{ altText }}"
+                    >
                       <p class="py-2 font-extrabold text-center "><span class="px-3 py-4 text-brand">{{photo.shootingSettings}}</p>
-                      <div class="gallery-slide-frame relative mx-auto w-full max-w-md overflow-hidden border border-slate-300 bg-white shadow">
+                      <div class="gallery-slide-frame relative mx-auto w-full max-w-md overflow-hidden border border-slate-300 bg-white shadow cursor-zoom-in">
                         <img
                           class="h-full w-full object-cover"
                           src="{{ transformedUrl }}"
@@ -90,6 +95,20 @@
     </div>
   </section>
 
+  <div class="gallery-lightbox" data-lightbox aria-hidden="true">
+    <button class="lightbox-backdrop" type="button" data-lightbox-close aria-label="Close lightbox"></button>
+    <div class="lightbox-dialog" role="dialog" aria-modal="true">
+      <div class="lightbox-toolbar">
+        <button class="lightbox-button" type="button" data-lightbox-prev aria-label="Previous image">[Prev]</button>
+        <button class="lightbox-button" type="button" data-lightbox-close aria-label="Close lightbox">[Close]</button>
+        <button class="lightbox-button" type="button" data-lightbox-next aria-label="Next image">[Next]</button>
+      </div>
+      <div class="lightbox-frame">
+        <img data-lightbox-image alt="" loading="lazy">
+      </div>
+    </div>
+  </div>
+
   {% js %}
     const carouselEl = document.querySelector('.gallery-glide');
     if (carouselEl) {
@@ -130,6 +149,78 @@
       });
 
       glide.mount();
+
+      const lightbox = document.querySelector('[data-lightbox]');
+      const lightboxImg = lightbox?.querySelector('[data-lightbox-image]');
+      const lightboxPrev = lightbox?.querySelector('[data-lightbox-prev]');
+      const lightboxNext = lightbox?.querySelector('[data-lightbox-next]');
+      const lightboxCloseBtns = lightbox ? Array.from(lightbox.querySelectorAll('[data-lightbox-close]')) : [];
+      let lightboxIndex = 0;
+
+      const slides = Array.from(carouselEl.querySelectorAll('.glide__slide'));
+      const slideData = slides.map((slide) => {
+        const imgEl = slide.querySelector('img');
+        const fullUrl = slide.dataset.fullUrl || imgEl?.src || '';
+        const alt = slide.dataset.alt || imgEl?.alt || '';
+        return { fullUrl, alt };
+      });
+
+      const openLightboxAt = (index) => {
+        if (!lightbox || !lightboxImg || !slideData[index]) return;
+        lightboxIndex = index;
+        const data = slideData[index];
+        lightboxImg.src = data.fullUrl;
+        lightboxImg.alt = data.alt;
+        lightbox.dataset.open = 'true';
+        lightbox.removeAttribute('aria-hidden');
+        lightbox.classList.add('is-open');
+        document.body.classList.add('overflow-hidden');
+        glide.go(`=${index}`);
+      };
+
+      const closeLightbox = () => {
+        if (!lightbox) return;
+        lightbox.dataset.open = 'false';
+        lightbox.setAttribute('aria-hidden', 'true');
+        lightbox.classList.remove('is-open');
+        document.body.classList.remove('overflow-hidden');
+      };
+
+      slides.forEach((slide, idx) => {
+        const frame = slide.querySelector('.gallery-slide-frame');
+        if (frame) {
+          frame.addEventListener('click', () => openLightboxAt(idx));
+        }
+      });
+
+      lightboxPrev?.addEventListener('click', () => {
+        const nextIdx = (lightboxIndex - 1 + slideData.length) % slideData.length;
+        openLightboxAt(nextIdx);
+      });
+
+      lightboxNext?.addEventListener('click', () => {
+        const nextIdx = (lightboxIndex + 1) % slideData.length;
+        openLightboxAt(nextIdx);
+      });
+
+      lightboxCloseBtns.forEach((btn) => {
+        btn.addEventListener('click', closeLightbox);
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (!lightbox || lightbox.dataset.open !== 'true') return;
+        if (event.key === 'Escape') {
+          closeLightbox();
+        } else if (event.key === 'ArrowLeft') {
+          const nextIdx = (lightboxIndex - 1 + slideData.length) % slideData.length;
+          openLightboxAt(nextIdx);
+          event.preventDefault();
+        } else if (event.key === 'ArrowRight') {
+          const nextIdx = (lightboxIndex + 1) % slideData.length;
+          openLightboxAt(nextIdx);
+          event.preventDefault();
+        }
+      });
 
       carouselEl.addEventListener('keydown', (event) => {
         if (event.key === 'ArrowLeft') {

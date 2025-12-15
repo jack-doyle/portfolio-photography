@@ -750,6 +750,117 @@ main {
      object-fit: cover;
 }
 
+/* Lightbox */
+
+.gallery-lightbox {
+  position: fixed;
+  inset: 0px;
+  z-index: 50;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-lightbox.is-open {
+  display: flex;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0px;
+  background-color: rgb(0 0 0 / 0.7);
+}
+
+.lightbox-dialog {
+  position: relative;
+  z-index: 10;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  max-height: 90vh;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 0.75rem;
+  background-color: rgb(255 255 255 / 0.95);
+  padding: 1rem;
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+@media (min-width: 640px) {
+  .lightbox-dialog {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    padding: 1.5rem;
+  }
+}
+
+.lightbox-dialog {
+  width: min(1100px, 96vw);
+}
+
+.lightbox-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  --tw-text-opacity: 1;
+  color: rgb(51 65 85 / var(--tw-text-opacity));
+}
+
+.lightbox-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #2b47e5ff;
+}
+
+.lightbox-button:hover {
+  color: #2b47e5ff;
+}
+
+.lightbox-button:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  --tw-ring-color: rgb(43 71 229 / 0.5);
+}
+
+.lightbox-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(226 232 240 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  height: min(75vh, 720px);
+}
+
+.lightbox-frame img {
+  height: 100%;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -770,24 +881,12 @@ main {
   visibility: collapse;
 }
 
-.absolute {
-  position: absolute;
-}
-
 .relative {
   position: relative;
 }
 
 .sticky {
   position: sticky;
-}
-
-.top-0 {
-  top: 0px;
-}
-
-.-left-\[50px\] {
-  left: -50px;
 }
 
 .mx-auto {
@@ -809,30 +908,6 @@ main {
 
 .mt-4 {
   margin-top: 1rem;
-}
-
-.mb-0 {
-  margin-bottom: 0px;
-}
-
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
-.mt-6 {
-  margin-top: 1.5rem;
-}
-
-.-mt-2 {
-  margin-top: -0.5rem;
-}
-
-.-mt-8 {
-  margin-top: -2rem;
-}
-
-.mt-0 {
-  margin-top: 0px;
 }
 
 .block {
@@ -885,6 +960,10 @@ main {
 
 .max-w-none {
   max-width: none;
+}
+
+.cursor-zoom-in {
+  cursor: zoom-in;
 }
 
 .flex-col {
@@ -993,10 +1072,6 @@ main {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-brand {
-  background-color: #2b47e5ff;
-}
-
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1004,14 +1079,6 @@ main {
 
 .p-0 {
   padding: 0px;
-}
-
-.p-2 {
-  padding: 0.5rem;
-}
-
-.p-4 {
-  padding: 1rem;
 }
 
 .px-3 {
@@ -1039,24 +1106,14 @@ main {
   padding-bottom: 0.75rem;
 }
 
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .pl-8 {
@@ -1149,11 +1206,6 @@ main {
 .text-slate-900 {
   --tw-text-opacity: 1;
   color: rgb(15 23 42 / var(--tw-text-opacity));
-}
-
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .shadow {
