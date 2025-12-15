@@ -5,12 +5,13 @@
     <title>Jack Doyle</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-      <link href="styles.css" rel="stylesheet"></head>
-  <body class="bg-white text-slate-900">
+      <link href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css" rel="stylesheet">
+<link href="styles.css" rel="stylesheet"></head>
+  <body class="bg-slate-100 text-slate-900">
     
     <header class="border-b border-slate-200/60">
       <div class="site-shell flex flex-col gap-4 py-6 sm:flex-row sm:items-center sm:justify-between">
-        <a class="text-xl font-semibold tracking-tight hover:text-brand focus-visible:outline-none focus-visible:ring focus-visible:ring-brand/50" href="index.html">
+        <a class="pl-8 text-brand text-xl font-bold tracking-tight focus-visible:outline-none focus-visible:ring focus-visible:ring-brand/50" href="index.html">
           Jack Doyle
         </a>
         <nav aria-label="Primary">
@@ -38,111 +39,367 @@
       </div>
     </header>
 
-    <main id="main-content" class="site-shell py-10 sm:py-14" tabindex="-1">
-        <section aria-labelledby="gallery-title" class="space-y-6">
-    <h1 id="gallery-title" class="page-title">Events</h1>
+    <main class="main-content site-shell" tabindex="-1">
+        
+  <section aria-labelledby="gallery-title" class="gallery-page">
+    <div>
+      <div class="gallery-shell mx-auto flex max-w-6xl flex-col gap-6 bg-slate-100 px-4 py-6 sm:px-8 sm:py-8">
 
-    
-    <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3" role="list">
-                                                              
-          <li class="card p-0">
-            <div class="aspect-[4/5] overflow-hidden rounded-lg">
-                              <img
-                  class="h-full w-full object-cover"
-                  src="uploads/images/_fit/18764314162gutz-742d79.jpg"
-                  alt="EIMA 7"
-                  loading="lazy"
-                  width="1200"
-                  height="795"
-                >
-                          </div>
-          </li>
-                                                                      
-          <li class="card p-0">
-            <div class="aspect-[4/5] overflow-hidden rounded-lg">
-                              <img
-                  class="h-full w-full object-cover"
-                  src="uploads/images/_fit/187643141631vev-d7a74d.jpg"
-                  alt="EIMA 4"
-                  loading="lazy"
-                  width="1200"
-                  height="795"
-                >
-                          </div>
-          </li>
-                                                                      
-          <li class="card p-0">
-            <div class="aspect-[4/5] overflow-hidden rounded-lg">
-                              <img
-                  class="h-full w-full object-cover"
-                  src="uploads/images/_fit/18764314163i4sb-b4ac46.jpg"
-                  alt="EIMA 5"
-                  loading="lazy"
-                  width="1200"
-                  height="795"
-                >
-                          </div>
-          </li>
-                                                                      
-          <li class="card p-0">
-            <div class="aspect-[4/5] overflow-hidden rounded-lg">
-                              <img
-                  class="h-full w-full object-cover"
-                  src="uploads/images/_fit/18764314163hhk4-a37c90.jpg"
-                  alt="EIMA 6"
-                  loading="lazy"
-                  width="1200"
-                  height="795"
-                >
-                          </div>
-          </li>
-                                                                      
-          <li class="card p-0">
-            <div class="aspect-[4/5] overflow-hidden rounded-lg">
-                              <img
-                  class="h-full w-full object-cover"
-                  src="uploads/images/_fit/1876431424372lz-9dad16.jpg"
-                  alt="EIMA 1"
-                  loading="lazy"
-                  width="1200"
-                  height="795"
-                >
-                          </div>
-          </li>
-                                                                      
-          <li class="card p-0">
-            <div class="aspect-[4/5] overflow-hidden rounded-lg">
-                              <img
-                  class="h-full w-full object-cover"
-                  src="uploads/images/_fit/18764314163vtpk-c98faa.jpg"
-                  alt="EIMA 2"
-                  loading="lazy"
-                  width="1200"
-                  height="795"
-                >
-                          </div>
-          </li>
-                                                                      
-          <li class="card p-0">
-            <div class="aspect-[4/5] overflow-hidden rounded-lg">
-                              <img
-                  class="h-full w-full object-cover"
-                  src="uploads/images/_fit/187643141631prp-eae33e.jpg"
-                  alt="EIMA 3"
-                  loading="lazy"
-                  width="1200"
-                  height="795"
-                >
-                          </div>
-          </li>
-                  </ul>
-  </section>
-    </main>
+        <div class="block md:hidden">
+          <div class="flex flex-col items-center gap-4">
+            <h1 class="text-[clamp(2.5rem,9vw,5rem)] text-brand font-extrabold lowercase tracking-tight">Events</h1>
+          </div>
+        </div>
+        
+                  <div class="glide gallery-glide" role="region" aria-label="Events image carousel" tabindex="0">
+            <div class="flex items-center justify-between text-xs uppercase tracking-wide text-slate-700">
+              <div class="flex items-center gap-2">
+                <span class="sr-only" id="carousel-status" aria-live="polite"></span>
+              </div>
+            </div>
 
-    <footer class="border-t border-slate-200/60">
-      <div class="site-shell py-6 text-center text-sm text-slate-500">
-        <div class="copyright">&copy;2025 Jack Doyle</div>
+            <div class="mt-3 flex items-center justify-between text-md font-semibold uppercase tracking-wide text-slate-700" data-glide-el="controls">
+              <button class="px-3 py-2 font-extrabold hover:text-brand focus-visible:outline-none focus-visible:ring focus-visible:ring-brand/50" data-glide-dir="<" aria-label="Previous slide">[PREV]</button>
+              <button class="px-3 py-2 font-extrabold hover:text-brand focus-visible:outline-none focus-visible:ring focus-visible:ring-brand/50" data-glide-dir=">" aria-label="Next slide">[NEXT]</button>
+            </div>
+
+            <div class="glide__track mt-2" data-glide-el="track">
+              <ul class="glide__slides">
+                                                                                                                                    
+                    <li
+                      class="glide__slide"
+                      data-lightbox-index="0"
+                      data-full-url="https://portfolio-craft.ddev.site//uploads/images/18764314162gutz-742d79.jpg"
+                      data-alt="EIMA 7"
+                    >
+                      <p class="py-2 font-extrabold text-center "><span class="px-3 py-4 text-brand">22mm, f5.6, 1/250s</p>
+                      <div class="gallery-slide-frame relative mx-auto w-full max-w-md overflow-hidden border border-slate-300 bg-white shadow cursor-zoom-in">
+                        <img
+                          class="h-full w-full object-cover"
+                          src="uploads/images/_fit/18764314162gutz-742d79.jpg"
+                          alt="EIMA 7"
+                          loading="lazy"
+                          width="1200"
+                          height="795"
+                        >
+                      </div>
+                    </li>
+                                                                                                                                                      
+                    <li
+                      class="glide__slide"
+                      data-lightbox-index="1"
+                      data-full-url="https://portfolio-craft.ddev.site//uploads/images/187643141631vev-d7a74d.jpg"
+                      data-alt="EIMA 4"
+                    >
+                      <p class="py-2 font-extrabold text-center "><span class="px-3 py-4 text-brand">30mm, f5.6, 1/250s</p>
+                      <div class="gallery-slide-frame relative mx-auto w-full max-w-md overflow-hidden border border-slate-300 bg-white shadow cursor-zoom-in">
+                        <img
+                          class="h-full w-full object-cover"
+                          src="uploads/images/_fit/187643141631vev-d7a74d.jpg"
+                          alt="EIMA 4"
+                          loading="lazy"
+                          width="1200"
+                          height="795"
+                        >
+                      </div>
+                    </li>
+                                                                                                                                                      
+                    <li
+                      class="glide__slide"
+                      data-lightbox-index="2"
+                      data-full-url="https://portfolio-craft.ddev.site//uploads/images/18764314163i4sb-b4ac46.jpg"
+                      data-alt="EIMA 5"
+                    >
+                      <p class="py-2 font-extrabold text-center "><span class="px-3 py-4 text-brand">55mm, f5.6, 1/250s</p>
+                      <div class="gallery-slide-frame relative mx-auto w-full max-w-md overflow-hidden border border-slate-300 bg-white shadow cursor-zoom-in">
+                        <img
+                          class="h-full w-full object-cover"
+                          src="uploads/images/_fit/18764314163i4sb-b4ac46.jpg"
+                          alt="EIMA 5"
+                          loading="lazy"
+                          width="1200"
+                          height="795"
+                        >
+                      </div>
+                    </li>
+                                                                                                                                                      
+                    <li
+                      class="glide__slide"
+                      data-lightbox-index="3"
+                      data-full-url="https://portfolio-craft.ddev.site//uploads/images/18764314163hhk4-a37c90.jpg"
+                      data-alt="EIMA 6"
+                    >
+                      <p class="py-2 font-extrabold text-center "><span class="px-3 py-4 text-brand">18mm, f5.6, 1/250s</p>
+                      <div class="gallery-slide-frame relative mx-auto w-full max-w-md overflow-hidden border border-slate-300 bg-white shadow cursor-zoom-in">
+                        <img
+                          class="h-full w-full object-cover"
+                          src="uploads/images/_fit/18764314163hhk4-a37c90.jpg"
+                          alt="EIMA 6"
+                          loading="lazy"
+                          width="1200"
+                          height="795"
+                        >
+                      </div>
+                    </li>
+                                                                                                                                                      
+                    <li
+                      class="glide__slide"
+                      data-lightbox-index="4"
+                      data-full-url="https://portfolio-craft.ddev.site//uploads/images/1876431424372lz-9dad16.jpg"
+                      data-alt="EIMA 1"
+                    >
+                      <p class="py-2 font-extrabold text-center "><span class="px-3 py-4 text-brand">50mm, f5.6, 1/125s</p>
+                      <div class="gallery-slide-frame relative mx-auto w-full max-w-md overflow-hidden border border-slate-300 bg-white shadow cursor-zoom-in">
+                        <img
+                          class="h-full w-full object-cover"
+                          src="uploads/images/_fit/1876431424372lz-9dad16.jpg"
+                          alt="EIMA 1"
+                          loading="lazy"
+                          width="1200"
+                          height="795"
+                        >
+                      </div>
+                    </li>
+                                                                                                                                                      
+                    <li
+                      class="glide__slide"
+                      data-lightbox-index="5"
+                      data-full-url="https://portfolio-craft.ddev.site//uploads/images/18764314163vtpk-c98faa.jpg"
+                      data-alt="EIMA 2"
+                    >
+                      <p class="py-2 font-extrabold text-center "><span class="px-3 py-4 text-brand">50mm, f5.6, 1/250s</p>
+                      <div class="gallery-slide-frame relative mx-auto w-full max-w-md overflow-hidden border border-slate-300 bg-white shadow cursor-zoom-in">
+                        <img
+                          class="h-full w-full object-cover"
+                          src="uploads/images/_fit/18764314163vtpk-c98faa.jpg"
+                          alt="EIMA 2"
+                          loading="lazy"
+                          width="1200"
+                          height="795"
+                        >
+                      </div>
+                    </li>
+                                                                                                                                                      
+                    <li
+                      class="glide__slide"
+                      data-lightbox-index="6"
+                      data-full-url="https://portfolio-craft.ddev.site//uploads/images/187643141631prp-eae33e.jpg"
+                      data-alt="EIMA 3"
+                    >
+                      <p class="py-2 font-extrabold text-center "><span class="px-3 py-4 text-brand">30mm, f5.6, 1/250s</p>
+                      <div class="gallery-slide-frame relative mx-auto w-full max-w-md overflow-hidden border border-slate-300 bg-white shadow cursor-zoom-in">
+                        <img
+                          class="h-full w-full object-cover"
+                          src="uploads/images/_fit/187643141631prp-eae33e.jpg"
+                          alt="EIMA 3"
+                          loading="lazy"
+                          width="1200"
+                          height="795"
+                        >
+                      </div>
+                    </li>
+                                                </ul>
+            </div>
+
+            <div class="glide__bullets mt-4 flex flex-wrap justify-center gap-2" data-glide-el="controls[nav]">
+                                                                                    <button
+                      class="glide__bullet group overflow-hidden border border-slate-200 bg-white shadow-sm ring-offset-2 transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring focus-visible:ring-brand/50"
+                      data-glide-dir="=0"
+                      aria-label="Go to slide 1"
+                    >
+                      <img class="h-full w-full object-cover transition duration-150 ease-in-out group-[[data-glide-dir]].glide__bullet--active:opacity-100" src="uploads/images/_fit/18764314162gutz-742d79.jpg" alt="" aria-hidden="true">
+                    </button>
+                                                                                                    <button
+                      class="glide__bullet group overflow-hidden border border-slate-200 bg-white shadow-sm ring-offset-2 transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring focus-visible:ring-brand/50"
+                      data-glide-dir="=1"
+                      aria-label="Go to slide 2"
+                    >
+                      <img class="h-full w-full object-cover transition duration-150 ease-in-out group-[[data-glide-dir]].glide__bullet--active:opacity-100" src="uploads/images/_fit/187643141631vev-d7a74d.jpg" alt="" aria-hidden="true">
+                    </button>
+                                                                                                    <button
+                      class="glide__bullet group overflow-hidden border border-slate-200 bg-white shadow-sm ring-offset-2 transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring focus-visible:ring-brand/50"
+                      data-glide-dir="=2"
+                      aria-label="Go to slide 3"
+                    >
+                      <img class="h-full w-full object-cover transition duration-150 ease-in-out group-[[data-glide-dir]].glide__bullet--active:opacity-100" src="uploads/images/_fit/18764314163i4sb-b4ac46.jpg" alt="" aria-hidden="true">
+                    </button>
+                                                                                                    <button
+                      class="glide__bullet group overflow-hidden border border-slate-200 bg-white shadow-sm ring-offset-2 transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring focus-visible:ring-brand/50"
+                      data-glide-dir="=3"
+                      aria-label="Go to slide 4"
+                    >
+                      <img class="h-full w-full object-cover transition duration-150 ease-in-out group-[[data-glide-dir]].glide__bullet--active:opacity-100" src="uploads/images/_fit/18764314163hhk4-a37c90.jpg" alt="" aria-hidden="true">
+                    </button>
+                                                                                                    <button
+                      class="glide__bullet group overflow-hidden border border-slate-200 bg-white shadow-sm ring-offset-2 transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring focus-visible:ring-brand/50"
+                      data-glide-dir="=4"
+                      aria-label="Go to slide 5"
+                    >
+                      <img class="h-full w-full object-cover transition duration-150 ease-in-out group-[[data-glide-dir]].glide__bullet--active:opacity-100" src="uploads/images/_fit/1876431424372lz-9dad16.jpg" alt="" aria-hidden="true">
+                    </button>
+                                                                                                    <button
+                      class="glide__bullet group overflow-hidden border border-slate-200 bg-white shadow-sm ring-offset-2 transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring focus-visible:ring-brand/50"
+                      data-glide-dir="=5"
+                      aria-label="Go to slide 6"
+                    >
+                      <img class="h-full w-full object-cover transition duration-150 ease-in-out group-[[data-glide-dir]].glide__bullet--active:opacity-100" src="uploads/images/_fit/18764314163vtpk-c98faa.jpg" alt="" aria-hidden="true">
+                    </button>
+                                                                                                    <button
+                      class="glide__bullet group overflow-hidden border border-slate-200 bg-white shadow-sm ring-offset-2 transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring focus-visible:ring-brand/50"
+                      data-glide-dir="=6"
+                      aria-label="Go to slide 7"
+                    >
+                      <img class="h-full w-full object-cover transition duration-150 ease-in-out group-[[data-glide-dir]].glide__bullet--active:opacity-100" src="uploads/images/_fit/187643141631prp-eae33e.jpg" alt="" aria-hidden="true">
+                    </button>
+                                          </div>
+          </div>
+        
+          <div class="hidden md:block">
+            <div class="flex flex-col items-center gap-4">
+              <h1 class="text-[clamp(2.5rem,9vw,5rem)] text-brand font-extrabold lowercase tracking-tight">Events</h1>
+            </div>
+          </div>
+        </div>
       </div>
-    </footer>
-  </body>
+    </div>
+  </section>
+
+  <div class="gallery-lightbox" data-lightbox aria-hidden="true">
+    <button class="lightbox-backdrop" type="button" data-lightbox-close aria-label="Close lightbox"></button>
+    <div class="lightbox-dialog" role="dialog" aria-modal="true">
+      <div class="lightbox-toolbar">
+        <button class="lightbox-button" type="button" data-lightbox-prev aria-label="Previous image">[Prev]</button>
+        <button class="lightbox-button" type="button" data-lightbox-close aria-label="Close lightbox">[Close]</button>
+        <button class="lightbox-button" type="button" data-lightbox-next aria-label="Next image">[Next]</button>
+      </div>
+      <div class="lightbox-frame">
+        <img data-lightbox-image alt="" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+      </main>
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+<script>const carouselEl = document.querySelector('.gallery-glide');
+    if (carouselEl) {
+      const statusEl = document.getElementById('carousel-status');
+      const countEl = document.getElementById('carousel-count');
+      const bullets = Array.from(carouselEl.querySelectorAll('.glide__bullet'));
+      const totalSlides = carouselEl.querySelectorAll('.glide__slide').length;
+      let autoplayEnabled = false;
+
+      const glide = new Glide(carouselEl, {
+        type: 'carousel',
+        focusAt: 'center',
+        perView: 1,
+        gap: 24,
+        autoplay: false,
+        hoverpause: true,
+        animationDuration: 550,
+        breakpoints: {
+          1024: { gap: 16 },
+          640: { gap: 12 }
+        }
+      });
+
+      const updateStatus = (index) => {
+        const humanIndex = index + 1;
+        const message = `Slide ${humanIndex} of ${totalSlides}`;
+        if (countEl) countEl.textContent = message;
+        if (statusEl) statusEl.textContent = message;
+        bullets.forEach((btn, i) => {
+          const isCurrent = i === index;
+          btn.classList.toggle('glide__bullet--active', isCurrent);
+          btn.setAttribute('aria-current', isCurrent ? 'true' : 'false');
+        });
+      };
+
+      glide.on(['mount.after', 'run.after'], () => {
+        updateStatus(glide.index);
+      });
+
+      glide.mount();
+
+      const lightbox = document.querySelector('[data-lightbox]');
+      const lightboxImg = lightbox?.querySelector('[data-lightbox-image]');
+      const lightboxPrev = lightbox?.querySelector('[data-lightbox-prev]');
+      const lightboxNext = lightbox?.querySelector('[data-lightbox-next]');
+      const lightboxCloseBtns = lightbox ? Array.from(lightbox.querySelectorAll('[data-lightbox-close]')) : [];
+      let lightboxIndex = 0;
+
+      const slides = Array.from(carouselEl.querySelectorAll('.glide__slide'));
+      const slideData = slides.map((slide) => {
+        const imgEl = slide.querySelector('img');
+        const fullUrl = slide.dataset.fullUrl || imgEl?.src || '';
+        const alt = slide.dataset.alt || imgEl?.alt || '';
+        return { fullUrl, alt };
+      });
+
+      const openLightboxAt = (index) => {
+        if (!lightbox || !lightboxImg || !slideData[index]) return;
+        lightboxIndex = index;
+        const data = slideData[index];
+        lightboxImg.src = data.fullUrl;
+        lightboxImg.alt = data.alt;
+        lightbox.dataset.open = 'true';
+        lightbox.removeAttribute('aria-hidden');
+        lightbox.classList.add('is-open');
+        document.body.classList.add('overflow-hidden');
+        glide.go(`=${index}`);
+      };
+
+      const closeLightbox = () => {
+        if (!lightbox) return;
+        lightbox.dataset.open = 'false';
+        lightbox.setAttribute('aria-hidden', 'true');
+        lightbox.classList.remove('is-open');
+        document.body.classList.remove('overflow-hidden');
+      };
+
+      slides.forEach((slide, idx) => {
+        const frame = slide.querySelector('.gallery-slide-frame');
+        if (frame) {
+          frame.addEventListener('click', () => openLightboxAt(idx));
+        }
+      });
+
+      lightboxPrev?.addEventListener('click', () => {
+        const nextIdx = (lightboxIndex - 1 + slideData.length) % slideData.length;
+        openLightboxAt(nextIdx);
+      });
+
+      lightboxNext?.addEventListener('click', () => {
+        const nextIdx = (lightboxIndex + 1) % slideData.length;
+        openLightboxAt(nextIdx);
+      });
+
+      lightboxCloseBtns.forEach((btn) => {
+        btn.addEventListener('click', closeLightbox);
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (!lightbox || lightbox.dataset.open !== 'true') return;
+        if (event.key === 'Escape') {
+          closeLightbox();
+        } else if (event.key === 'ArrowLeft') {
+          const nextIdx = (lightboxIndex - 1 + slideData.length) % slideData.length;
+          openLightboxAt(nextIdx);
+          event.preventDefault();
+        } else if (event.key === 'ArrowRight') {
+          const nextIdx = (lightboxIndex + 1) % slideData.length;
+          openLightboxAt(nextIdx);
+          event.preventDefault();
+        }
+      });
+
+      carouselEl.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowLeft') {
+          glide.go('<');
+          event.preventDefault();
+        } else if (event.key === 'ArrowRight') {
+          glide.go('>');
+          event.preventDefault();
+        }
+      });
+    };</script></body>
 </html>

@@ -6,11 +6,11 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
       <link href="styles.css" rel="stylesheet"></head>
-  <body class="bg-white text-slate-900">
+  <body class="bg-slate-100 text-slate-900">
     
     <header class="border-b border-slate-200/60">
       <div class="site-shell flex flex-col gap-4 py-6 sm:flex-row sm:items-center sm:justify-between">
-        <a class="text-xl font-semibold tracking-tight hover:text-brand focus-visible:outline-none focus-visible:ring focus-visible:ring-brand/50" href="index.html">
+        <a class="pl-8 text-brand text-xl font-bold tracking-tight focus-visible:outline-none focus-visible:ring focus-visible:ring-brand/50" href="index.html">
           Jack Doyle
         </a>
         <nav aria-label="Primary">
@@ -38,55 +38,36 @@
       </div>
     </header>
 
-    <main id="main-content" class="site-shell py-10 sm:py-14" tabindex="-1">
+    <main class="main-content site-shell" tabindex="-1">
         <section aria-labelledby="contact-title" class="flex flex-col gap-8">
-      <div class="space-y-3 max-w-3xl">
-        <h1 id="contact-title" class="page-title">Get in touch</h1>
-        <p class="text-lg leading-relaxed text-slate-700">
-          I’m available for assignments, commissions, and collaborations. Share a few details about what you have in mind and I’ll get back to you quickly.
-        </p>
-      </div>
+    <div class="space-y-3 max-w-3xl">
+      <h1 id="contact-title" class="page-title">Get in touch</h1>
+      <p class="text-lg leading-relaxed text-slate-700">
+        I’m available for assignments, commissions, and collaborations. Share a few details about what you have in mind and I’ll get back to you quickly.
+      </p>
+    </div>
 
-      <div class="grid gap-8 md:grid-cols-[260px,1fr] md:items-start">
-                                      <figure class="overflow-hidden rounded-lg border border-slate-200/80 shadow-sm">
-            <img
-              class="h-full w-full object-cover"
-              src="actions/assets/generate-transform%3FtransformId=26"
-              alt="Get in touch portrait"
-              loading="lazy"
-              width="1000"
-              height="800"
-            >
-          </figure>
-        
-        <div class="space-y-6">
-          <div class="prose max-w-none">
-            <p>
-              You can reach me directly at
-              <a href="mailto:ie.jackdoyle@gmail.com">ie.jackdoyle@gmail.com</a>.
-            </p>
-          </div>
+    <div class="grid gap-8 md:grid-cols-[260px,1fr] md:items-start">
+      <div class="space-y-6 md:order-5">
+        <div class="prose max-w-none">
+          <p>
+            You can reach me directly at
+            <a href="mailto:ie.jackdoyle@gmail.com">ie.jackdoyle@gmail.com</a>.
+          </p>
         </div>
       </div>
-    </section>
+                                              <figure class="overflow-hidden border border-slate-200/80 shadow-sm md:order-0">
+          <img
+            class="h-full w-full object-cover"
+            src="uploads/images/_fit/dsc-0286-2-42a707.jpg"
+            alt="Get in touch portrait"
+            loading="lazy"
+            width="1000"
+            height="800"
+          >
+        </figure>
+          </div>
+  </section>
     </main>
-
-    <footer class="border-t border-slate-200/60">
-      <div class="site-shell py-6 text-center text-sm text-slate-500">
-        <div class="copyright">&copy;2025 Jack Doyle</div>
-      </div>
-    </footer>
-  <script type="text/javascript">
-/*<![CDATA[*/
-(function(){
-  try {
-    var req = new XMLHttpRequest();
-    req.open('GET', "https:\/\/portfolio-craft.ddev.site\/actions\/queue\/run", true);
-    req.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-    if (req.readyState === 4) return;
-    req.send();
-  } catch (e) {}
-})();
-/*]]>*/
-</script></body>
+  </body>
 </html>
