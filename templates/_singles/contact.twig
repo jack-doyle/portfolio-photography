@@ -26,7 +26,7 @@
         {% set transformedUrl = profileImage.getUrl('fit') ?? profileImage.url %}
         {% set transformedWidth = profileImage.getWidth('fit') ?? profileImage.width ?? null %}
         {% set transformedHeight = profileImage.getHeight('fit') ?? profileImage.height ?? null %}
-        <figure class="overflow-hidden rounded-lg border border-slate-200/80 shadow-sm md:order-0">
+        <figure class="overflow-hidden border border-slate-200/80 shadow-sm md:order-0">
           <img
             class="h-full w-full object-cover"
             src="{{ transformedUrl }}"

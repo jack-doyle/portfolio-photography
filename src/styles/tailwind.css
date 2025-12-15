@@ -61,34 +61,22 @@
   /* Glide */
   .gallery-page {
     overflow: visible;
-  }
-
-  @media (min-width: 1024px) {
-    .gallery-page {
-      height: calc(100vh - 120px);
-      overflow: hidden;
-    }
+    min-height: calc(100vh - 120px);
   }
 
   .gallery-shell {
     @apply gap-6;
   }
 
-  @media (min-width: 1024px) {
-    .gallery-shell {
-      max-height: calc(100vh - 140px);
-    }
-  }
-
   .gallery-slide-frame {
     aspect-ratio: 3 / 4;
     width: min(90vw, 26rem);
-    max-height: min(60vh, 500px);
+    max-height: min(70vh, 720px);
   }
 
   @media (min-width: 1024px) {
     .gallery-slide-frame {
-      max-height: min(58vh, 480px);
+      max-height: min(75vh, 780px);
     }
   }
 
@@ -98,8 +86,8 @@
 
   .gallery-glide .glide__bullet {
     @apply rounded-none;
-    width: 3.25rem;
-    height: 3.25rem;
+    width: 3rem;
+    height: 3rem;
   }
 
   .gallery-glide .glide__bullet--active {
@@ -113,7 +101,7 @@
 
 @layer utilities {
   .page-title {
-    @apply text-3xl sm:text-4xl font-semibold tracking-tight text-slate-900 mt-6;
+    @apply text-3xl sm:text-4xl font-semibold tracking-tight text-brand mt-4 md:mt-12;
   }
 
   .muted {

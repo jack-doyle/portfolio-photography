@@ -9,17 +9,41 @@
 
   {% if channelSections|length %}
     <section aria-labelledby="portfolio" class="space-y-6">
-      <div class="space-y-2">
-        <h1 id="portfolio" class="page-title">Portfolio</h1>
-        <p class="muted">Browse the full set of galleries and stories.</p>
-      </div>
-
-      <ul role="list" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <ul role="list" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 mt-12">
         {% for section in channelSections %}
-          <li class="card">
-            <a class="nav-link justify-between text-base font-semibold" href="{{ url(section.handle) }}">
-              <span>{{ section.name }}</span>
-              <span aria-hidden="true">→</span>
+          {% set sectionEntry = craft.entries()
+            .section(section.handle)
+            .status('live')
+            .orderBy('postDate desc')
+            .one()
+          %}
+          {% set thumb = sectionEntry ? sectionEntry.image.one() : null %}
+          {% set thumbUrl = thumb ? (thumb.getUrl('fit') ?? thumb.url) : null %}
+          {% set thumbAlt = thumb ? (thumb.alt ?? sectionEntry.title) : section.name %}
+          {% set thumbWidth = thumb ? (thumb.getWidth('fit') ?? thumb.width ?? null) : null %}
+          {% set thumbHeight = thumb ? (thumb.getHeight('fit') ?? thumb.height ?? null) : null %}
+
+          <li>
+            <a class="group block overflow-hidden border-slate-200 transition focus-visible:outline-none focus-visible:ring focus-visible:ring-brand/50" href="{{ url(section.handle) }}">
+              <div class="aspect-[4/3] overflow-hidden">
+                {% if thumb %}
+                  <img
+                    class="h-full w-full object-cover transition duration-200"
+                    src="{{ thumbUrl }}"
+                    alt="{{ thumbAlt }}"
+                    loading="lazy"
+                    width="{{ thumbWidth }}"
+                    height="{{ thumbHeight }}"
+                  >
+                {% else %}
+                  <div class="flex h-full items-center justify-center text-brand text-sm font-medium uppercase tracking-wide text-slate-500">
+                    {{ section.name }}
+                  </div>
+                {% endif %}
+              </div>
+              <div class="flex items-center justify-between px-4 py-3 text-brand font-semibold">
+                <span>{{ section.name }}</span>
+              </div>
             </a>
           </li>
         {% endfor %}

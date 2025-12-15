@@ -27,9 +27,11 @@
               <div class="flex items-center gap-2">
                 <span class="sr-only" id="carousel-status" aria-live="polite"></span>
               </div>
-              <div class="text-slate-500 text-xs" aria-live="polite" aria-atomic="true" id="carousel-count">
-                Slide 1 of {{ photos|length }}
-              </div>
+            </div>
+
+            <div class="mt-3 flex items-center justify-between text-md font-semibold uppercase tracking-wide text-slate-700" data-glide-el="controls">
+              <button class="px-3 py-2 font-extrabold hover:text-brand focus-visible:outline-none focus-visible:ring focus-visible:ring-brand/50" data-glide-dir="<" aria-label="Previous slide">[PREV]</button>
+              <button class="px-3 py-2 font-extrabold hover:text-brand focus-visible:outline-none focus-visible:ring focus-visible:ring-brand/50" data-glide-dir=">" aria-label="Next slide">[NEXT]</button>
             </div>
 
             <div class="glide__track mt-2" data-glide-el="track">
@@ -43,6 +45,7 @@
                     {% set transformedHeight = img.getHeight('fit') ?? img.height ?? null %}
 
                     <li class="glide__slide">
+                      <p class="py-2 font-extrabold text-center "><span class="px-3 py-4 text-brand">{{photo.shootingSettings}}</p>
                       <div class="gallery-slide-frame relative mx-auto w-full max-w-md overflow-hidden border border-slate-300 bg-white shadow">
                         <img
                           class="h-full w-full object-cover"
@@ -57,11 +60,6 @@
                   {% endif %}
                 {% endfor %}
               </ul>
-            </div>
-
-            <div class="mt-3 flex items-center justify-between text-xs font-semibold uppercase tracking-wide text-slate-700" data-glide-el="controls">
-              <button class="px-3 py-2 font-extrabold hover:text-brand focus-visible:outline-none focus-visible:ring focus-visible:ring-brand/50" data-glide-dir="<" aria-label="Previous slide">[ PREV ]</button>
-              <button class="px-3 py-2 font-extrabold hover:text-brand focus-visible:outline-none focus-visible:ring focus-visible:ring-brand/50" data-glide-dir=">" aria-label="Next slide">[ NEXT ]</button>
             </div>
 
             <div class="glide__bullets mt-4 flex flex-wrap justify-center gap-2" data-glide-el="controls[nav]">

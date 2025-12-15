@@ -1,4 +1,4 @@
-dateModified: 1765742021
+dateModified: 1765829789
 elementSources:
   craft\elements\Entry:
     -
@@ -91,7 +91,6 @@ meta:
     a4dc5cc4-5df0-4133-8583-adef81cfc9bf: Fit # Fit
     ad9420b0-2379-4dcc-8d78-3930095db1d6: Images # Images
     b753256c-ff31-460f-b741-7311916447e1: About # About
-    ba3952b7-dbf0-4f79-b16f-d424793b28c8: Post # Post
     cb4b8c9d-20f8-435d-9378-40621d8579e2: Concerts # Concerts
     cbc07d54-ec3a-4235-a1e6-9c3d36272859: Portfolio # Portfolio
     cfe57ae3-6eb9-4976-b280-e9a654067091: People # People
